@@ -1,0 +1,138 @@
+* 
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'sans-serif';
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+}
+
+.logo { 
+    width: 120px;
+    padding: 20px 0;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 64px;
+    font-weight: 600;
+}
+
+.content h1 span{
+    color: #ff375f;
+}
+
+.content .button-container {
+    display: flex;
+    flex-direction: row; /* Menjadikan tata letak horizontal */
+    align-items: center; /* Center the buttons vertically */
+    padding-top: 30px;
+}
+
+
+
+/* Tampilan default */
+.content .button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.content button {
+    background: transparent;
+    font-size: 25px;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 12px 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.content button:first-child {
+    margin-right: 10px;
+}
+
+.content button:hover {
+    background-color: #fff;
+    color: #ff375f;
+}
+
+
+
+.launch-time {
+    display: flex;
+}
+
+.launch-time div {
+    flex-basis: 100px;
+}
+
+.launch-time div p {
+    font-size: 60px;
+    margin-bottom: -14px;
+}
+
+.rocket {
+    width: 250px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: rocket 4s linear infinite;
+}
+
+@keyframes rocket{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 105%;
+        opacity: 1;
+    }
+}
+
+/* Tampilan responsif untuk perangkat seluler (lebar maksimum 600px) */
+@media (max-width: 600px) {
+
+
+    .content h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+    .container {
+        padding-top: 1px;
+    }
+    .content .button-container {
+        flex-direction: column; /* Mengubah tata letak menjadi vertikal */
+        padding-top: 15px; /* Menambah jarak antara tombol */
+        text-align: left;
+    }
+
+    .content button {
+        margin: 10px 0; /* Menambah jarak di antara tombol */
+    }
+}
