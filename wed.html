@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectku</title>
+
+    <link rel="stylesheet" href="stl.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="images/logo.png" alt="logo" class="logo"> -->
+
+        <a href="index.html"><h1 class="logo">Projectku....</h1></a>
+
+        <div class="content">
+            <p>Website being created</p>
+            <h1>We'are <span>Launching</span> Soon</h1>
+
+            <div class="launch-time">
+                <div>
+                    <p id="hari">00</p>
+                    <span>Hari</span>
+                </div>
+
+                <div>
+                    <p id="jam">00</p>
+                    <span>Jam</span>
+                </div>
+
+                <div>
+                    <p id="menit">00</p>
+                    <span>Menit</span>
+                </div>
+
+                <div>
+                    <p id="detik">00</p>
+                    <span>Detik</span>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <a href="car.html"><button type="button">Bootcamp Sewa Mobil</button></a>
+                <a href="port.html"><button type="button">New Portofolio</button></a>
+                <a href="bbt.html"><button type="button">New Bali Brilliant Trans</button></a>
+                <a href="wed.html"><button type="button">Wedding Website</button></a>
+            </div>
+
+        </div>
+
+        <img src="images/rocket.png" alt="rocket" class="rocket">
+    </div>
+</body>
+
+    <script>
+
+        var hari_H = new Date("Jan 02, 24 16:50:00").getTime();
+        var x = setInterval(function() {
+            var sekarang = new Date().getTime();
+            var jarak = hari_H - sekarang;
+
+            var hari = Math.floor(jarak / (1000 * 60 * 60 * 24));
+            var jam = Math.floor((jarak % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var menit = Math.floor((jarak % (1000 * 60 * 60)) / (1000 * 60));
+            var detik = Math.floor((jarak % (1000 * 60)) / 1000);
+
+            document.getElementById("hari").innerHTML = hari;
+            document.getElementById("jam").innerHTML = jam;
+            document.getElementById("menit").innerHTML = menit;
+            document.getElementById("detik").innerHTML = detik;
+
+        },1000);
+    </script>
+</html>
